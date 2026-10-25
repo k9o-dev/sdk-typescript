@@ -1,0 +1,46 @@
+{
+  "name": "@k9o/core",
+  "version": "1.2.0",
+  "description": "Kilimanjaro platform SDK — createClient + data-plane + projects + migrations + functions + studio (workflows/dashboards) + compute.llms + realtime subscriptions + KError + meta accessor sugar. Composes with @k9o/gate (auth) and @k9o/extensions (extension consumption).",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./errors": "./src/kerror.ts",
+    "./types": "./src/types.ts",
+    "./http": "./src/http.ts",
+    "./url-grammar": "./src/url-grammar.ts",
+    "./envelope": "./src/envelope.ts",
+    "./byos": "./src/byos.ts"
+  },
+  "files": [
+    "src",
+    "LICENSE",
+    "NOTICE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://kilimanjaro.dev",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/k9o-dev/sdk-typescript"
+  },
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@k9o/gate": "*",
+    "@k9o/extensions": "*",
+    "@k9o/kibo": "*"
+  },
+  "devDependencies": {
+    "bun-types": "^1.1.0",
+    "typescript": "^5.6.0"
+  }
+}
